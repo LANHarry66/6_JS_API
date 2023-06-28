@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        const father = document.querySelector('.father')
+        // mouseover会有冒泡现象，鼠标先经过父亲，再去孩子时候，会有冒泡
+        // father.addEventListener('mouseover',function(){
+        //     console.log('鼠标经过');
+        // })
+        // father.addEventListener('mouseout',function(){
+        //     console.log('鼠标离开');
+        // })
+
+        // mouseenter不会有冒泡
+        father.addEventListener('mouseenter',function(){
+            console.log('鼠标经过');
+        })
+        father.addEventListener('mouseleave',function(){
+            console.log('鼠标离开');
+        })
+// 实际应用推荐mouseenter
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 了解 -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        // 捕获事件 DOM.addEventListener(事件类型，函数，是否使用捕获机制)
+        // 当加了true后，就从document>father>son一层一层往下执行
+        // 当不写或false，就是冒泡，就从song>father>document一层一层往外执行,智慧冒泡同名事件click
+        document.addEventListener('click', function () {
+            alert('爷爷');
+        }, true);
+        const fa = document.querySelector('.father');
+        const son = document.querySelector('.son');
+        fa.addEventListener('click', function () {
+            alert('爸爸');
+        }, true);
+        son.addEventListener('click', function () {
+            alert('儿子');
+        }, true)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        const btn = document.querySelector('button');
+        // btn.onclick = function () {
+        //     alert('a');
+        // };
+        // // 事件解绑
+        // btn.onclick = null
+
+        function f1(){alert(1)}
+        btn.addEventListener('click',f1)
+        // 事件解绑,匿名函数无法解绑
+        btn.removeEventListener('click',f1)
+    </script>
+</body>
+
+</html>

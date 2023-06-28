@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 20px;
+            border: 10px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // resize浏览器窗口发生变化是，触发事件
+        // window.addEventListener('resize',function(){
+        //     console.log(1);
+        // })
+
+        const div = document.querySelector('div')
+        // 获得div宽度,包含padding，不包含border
+        console.log(div.clientWidth);
+        console.log(div.clientHeight);
+
+    </script>
+</body>
+</html>
+<!-- 作用：获得元素宽度 高度，包括了padding，不包括boader -->
