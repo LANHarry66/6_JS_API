@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 正则表达式，匹配字符的模式
+        const str = '我们在学习前端，希望学习前端能高薪毕业'
+        // 定义规则
+        const reg = /前端/
+        // 判断是否符合规则
+        // console.log(reg.test(str));
+        console.log(reg.exec(str));//返回数组
+    </script>
+</body>
+</html>

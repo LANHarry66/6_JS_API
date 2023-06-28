@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(/哈/.test('哈'));//true
+        // 边界符,必须以哈开头
+        console.log(/^哈/.test('哈'));//true
+        console.log(/^哈/.test('哈hehe哈哈'));//ture
+        console.log(/^哈/.test('h哈'));//false
+        // 以哈开头以哈结尾
+        console.log(/^哈$/.test('哈'));//true
+        console.log(/^哈$/.test('哈哈'));//false
+
+        console.log('-----------------');
+        // *允许重复0次或更多次
+        console.log(/^哈$/.test('哈'));
+        console.log(/^哈*$/.test('哈'));//true
+        console.log(/^哈*$/.test(''));//true
+        console.log(/^哈*$/.test('哈哈哈哈哈'));//true
+        console.log(/^哈*$/.test('哈哈二哈哈哈'));//false
+        console.log('-----------------');
+        // +允许重复1次或更多次
+        console.log(/^哈$/.test('哈'));//true
+        console.log(/^哈+$/.test('哈'));//true
+        console.log(/^哈+$/.test(''));//false
+        console.log(/^哈+$/.test('哈哈哈哈哈'));//true
+        console.log(/^哈+$/.test('哈哈二哈哈哈'));//false
+        console.log('-----------------');
+        //?允许重复0次或1次
+        console.log(/^哈$/.test('哈'));//true
+        console.log(/^哈?$/.test('哈'));//true
+        console.log(/^哈?$/.test(''));//true
+        console.log(/^哈?$/.test('哈哈哈'));//false
+        console.log(/^哈?$/.test('哈二哈哈'));//false
+        console.log('-----------------');
+        // {n}重复n次
+        console.log(/^哈$/.test('哈'));//true
+        console.log(/^哈{4}$/.test('哈'));//false
+        console.log(/^哈{4}$/.test('哈哈哈哈'));//true
+        console.log('-----------------');
+        // {n,}重复n次或更多
+        console.log(/^哈$/.test('哈'));//true
+        console.log(/^哈{2,}$/.test('哈'));//false
+        console.log(/^哈{2,}$/.test('哈哈'));//true
+        console.log(/^哈{2,}$/.test('哈哈哈'));//true
+        console.log('-----------------');
+        // {n,m}重复n到m次
+        console.log(/^哈$/.test('哈'));//true
+        console.log(/^哈{2,4}$/.test('哈'));//false
+        console.log(/^哈{2,4}$/.test('哈哈'));//true
+        console.log(/^哈{2,4}$/.test('哈哈哈'));//true
+        console.log(/^哈{2,4}$/.test('哈哈哈哈'));//true
+        console.log(/^哈{2,4}$/.test('哈哈哈哈哈'));//false
+
+        console.log('-----------------');
+        // 字符类[abc] 只选一个
+        console.log(/^[abc]$/.test('a'));//true
+        console.log(/^[abc]$/.test('b'));//true
+        console.log(/^[abc]$/.test('c'));//true
+        console.log(/^[abc]$/.test('ab'));//false
+        console.log(/^[abc]{2}$/.test('ab'));//true
+
+        console.log('-----------------');
+        // 字符类[a-z] 只选一个
+        console.log(/^[a-z]$/.test('c'));//true
+        console.log(/^[a-zA-Z0-9]$/.test('c'));//true
+
+
+    </script>
+</body>
+
+</html>
