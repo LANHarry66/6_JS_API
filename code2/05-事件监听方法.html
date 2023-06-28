@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        const btn = document.querySelector('button')
+        // 以前,会出现覆盖
+        // btn.onclick = function(){
+        //     alert(11)
+        // }
+        // btn.onclick = function(){
+        //     alert(22)
+        // }
+
+        // 现在，不会出现覆盖
+        btn.addEventListener('click',function(){
+            alert(11)
+        })
+        btn.addEventListener('click',function(){
+            alert(22)
+        })
+    </script>
+</body>
+</html>

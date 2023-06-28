@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+            font: 40px bold;
+            color: red;
+            text-align: center;
+           
+            position: relative;
+        }
+        .box1{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            font-size: 15px;
+            background-color: skyblue;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        我是一个广告
+        <div class="box1">X</div>
+    </div>
+    
+    <script>
+        
+        const box1 = document.querySelector('.box1')
+        const box = document.querySelector('.box')
+        box1.addEventListener('click',function(){
+            box.style.display = 'none'
+        })
+    </script>
+</body>
+</html>

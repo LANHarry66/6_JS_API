@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // 获取元素
+        const box = document.querySelector('.box')
+        // 修改样式属性，对象.style.样式属性
+        box.style.width = '300px'
+        // css中遇见短横线属性，在js中用小驼峰
+        box.style.backgroundColor = 'red'
+        box.style.border = '10px solid black'
+        box.style.borderTop = '10px skyblue solid'
+    </script>
+</body>
+</html>

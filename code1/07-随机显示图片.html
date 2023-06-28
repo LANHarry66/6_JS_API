@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="" alt="">
+    <script>
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N;
+        }
+
+        const ans = getRandom(1, 6);
+        const pic = document.querySelector('img');
+        pic.src = `./images/${ans}.webp`
+        
+    </script>
+</body>
+
+</html>

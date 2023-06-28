@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="dad">
+        <div class="son"></div>
+    </div>
+    <script>
+        // 通过parentNode属性查找，返回最近一级的父节点，找不到返回null
+        const son = document.querySelector('.son')
+        console.log(son.parentNode);
+        // 获取爷爷
+        console.log(son.parentNode.parentNode);
+    </script>
+</body>
+
+</html>

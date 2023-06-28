@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.itcast.cn">5秒后自动跳转</a>
+    <script>
+        let time = 5;
+        const a = document.querySelector('a');
+        let id = setInterval(function () {
+            time--;
+            a.innerHTML = `${time}秒后自动跳转`;
+            if (time === 0) {
+                clearInterval(id);
+                location.href = 'https://www.itcast.cn';
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

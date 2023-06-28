@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            margin: 100px auto;
+            padding: 10px;
+            border: 10px red solid;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 获取元素
+        const div = document.querySelector('div')
+        // 添加类名，如果div原先有类名了，会被覆盖
+        div.className = 'box'
+    </script>
+</body>
+</html>
+<!-- 使用calssName 使代码更简洁 但会覆盖以前的类名-->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 存 localStorage.setItem(key,value)
+        localStorage.setItem('uname', 'pink');
+        // 取 localStorage.getItem(键)
+        console.log(localStorage.getItem('uname'));
+        // 删除 localStorage.removeItem(键)
+        localStorage.removeItem('uname');
+        console.log(localStorage.getItem('uname'));
+        // 改
+        localStorage.setItem('uname', 'red');
+
+        localStorage.setItem('age',18)
+    </script>
+</body>
+
+</html>
+<!-- 本地存储只能存储字符串形式 -->
+<!-- sessonStorage 使用方法和localStorage 一致，只不过sessonStorage一关闭浏览器数据就会消失 -->

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div data-id="d1" data-se="test">1</div>
+    <div data-id="d2">2</div>
+    <div data-id="d3">3</div>
+    <div data-id="d4">4</div>
+    <div data-id="d5">5</div>
+    <script>
+        const diy1 = document.querySelector('div')
+        console.log(diy1.dataset.id);//dateset拿第一个div属性的集合
+        console.log(diy1.dataset.se);
+    </script>
+</body>
+</html>
+<!-- 自定义属性 data-名字 -->

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">123</div>
+    <div class="box">abc</div>
+    <p id="nav">test</p>
+    <ul>
+        <li>test1</li>
+        <li>test2</li>
+        <li>test3</li>
+    </ul>
+
+    <ul class="nav">
+        <li>menu</li>
+        <li>introduce</li>
+        <li>tel</li>
+    </ul>
+    <script>
+        // 选择匹配第一个元素,即123
+        // const box = document.querySelector('div')//可以输入选择器，或者类名
+        // console.log(box);
+
+        // const nav = document.querySelector('#nav')
+        // console.log(nav);
+        // nav.style.color = 'red'
+
+        // const li = document.querySelector('ul li:first-child')
+        // console.log(li);
+
+
+        // 选择匹配的多个元素,返回的对象存在数组中，修改对象属性只能遍历数组
+        // const liAll = document.querySelectorAll('ul li')
+        // console.log(liAll);
+
+        // 练习
+        // const nav = document.querySelector('.nav')
+        // console.log(nav);
+
+        // const liS = document.querySelectorAll('.nav li');
+        // console.log(liS);
+        // for (let i = 0; i < liS.length; i++) {
+        //     console.log(liS[i]);
+        // }
+
+    </script>
+</body>
+
+</html>

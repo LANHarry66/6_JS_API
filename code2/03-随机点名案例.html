@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+
+            width: 450px;
+            height: 40px;
+            color: red;
+
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>随机点名</h2>
+    <div class="box">
+        <span>名字是：</span>
+        <div class="name">这里显示姓名</div>
+    </div>
+    <div class="btns">
+        <button class="start">开始</button>
+        <button class="end">结束</button>
+    </div>
+
+    <script>
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N;
+        }
+        // 数据数组
+        const arr = ['马超', '黄忠', '赵云', '关羽', '张飞'];
+
+        const start = document.querySelector('.btns .start');
+        const end = document.querySelector('.btns .end');
+        const name = document.querySelector('.box .name');
+
+        let n = 0;
+        let index = 0;
+        // 开始
+        start.addEventListener('click', function () {
+            n = setInterval(function () {
+                index = getRandom(0, arr.length - 1);
+                name.innerHTML = `${arr[index]}`;
+            }, 35);
+            if (arr.length === 1) {
+                start.disabled = true;
+                end.disabled = true;
+            }
+        });
+
+        // 结束
+        end.addEventListener('click', function () {
+            clearInterval(n);
+
+            arr.splice(index, 1);
+            console.log(arr);
+
+        })
+    </script>
+</body>
+
+</html>

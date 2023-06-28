@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // serInterval(函数,间隔时间mm)
+
+        // 第一种
+
+        let m = setInterval(function () {
+            console.log(1);
+        }, 1000);
+        console.log(m);
+
+        // 第二种
+        function f1() {
+            console.log(2);
+        }
+
+        let n = setInterval(f1, 1000);
+        console.log(n);
+        // 关闭定时器 
+        clearInterval(n)
+    </script>
+</body>
+
+</html>
+<!-- 定时器里面的函数不加括号。
+定时器有返回数字型 
+要关闭拿哪个定时器，找到他的返回值就行了
+-->

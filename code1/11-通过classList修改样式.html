@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            color: red;
+            font-size: 40px;
+            text-align: center;
+            line-height: 200px;
+            margin: 0 auto;
+        }
+        .active{
+            color: aqua;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">test</div>
+    <script>
+        // 获取元素
+        const box = document.querySelector('.box')
+        // 通过classList('类名')添加
+        box.classList.add('active')
+        // 通过classList('类名')删除
+        box.classList.remove('active')
+        // 切换类 toggle('类名'),有就删掉，没有就加上
+        box.classList.toggle('active')
+    </script>
+</body>
+</html>
+<!-- className和classList都是将类提前写在style中,然后添加给其他标签 -->

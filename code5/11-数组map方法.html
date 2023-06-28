@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = ['red','pink','black']
+        // map作用和forEach相似，map返回数组类型
+        const arrNew = arr.map(function(ele,index){
+            console.log(ele);
+            console.log(index);
+            return ele + '颜色'
+        })
+        console.log(arrNew);
+        
+    </script>
+</body>
+</html>

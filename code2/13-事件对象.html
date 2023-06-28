@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <br>
+    <input type="text">
+    <script>
+        // 获取事件对象，元素.addEventListener('click',function(e){})，e就是事件对象
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function (e) {
+            console.log(e);
+        });
+        // 事件对象属性
+        // type：获取当前事件的类型
+        // clientX/clientY:光标相对于浏览器窗口的坐标
+        // offsetX/offsetY：光标相当于DOM元素左上角位置
+        // key：用户按下的键盘值
+
+        const ipt = document.querySelector('input');
+        ipt.addEventListener('keyup', function (e) {
+            // console.log(e);
+            // 只想让按了回车键才发布消息
+            if(e.key==='Enter'){
+                console.log('发布消息');
+            }
+        })
+    </script>
+</body>
+
+</html>

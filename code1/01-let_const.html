@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = ['red', 'pink'];
+        a.push('black');
+        console.log(a);
+        // 为什么这里a能用const，因为a所指向的数组的地址没有发生改变，
+        // 而地址所指向堆中的地址发生改变并不影响a
+
+        // a = [1,2,3],a指向新的数组，地址发生改变，会报错
+    </script>
+</body>
+
+</html>

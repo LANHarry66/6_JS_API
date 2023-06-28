@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        // function fn() {
+        //     console.log(this);
+        // }
+        // fn()
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            // console.log(this);
+            // this指向的是函数的调用者，button
+
+            // 以前改变buttton触发时颜色
+            // btn.style.backgroundColor = 'pink'
+
+            // 学了this后
+            this.style.backgroundColor = 'pink';
+
+            // 回调函数，函数A当做参数传递给函数B，称A为回调函数
+        })
+    </script>
+</body>
+
+</html>
